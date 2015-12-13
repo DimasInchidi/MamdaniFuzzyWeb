@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app metadata-complete="false" version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <description>View form</description>
+        <servlet-name>form page</servlet-name>
+        <jsp-file>/pages/form.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>form page</servlet-name>
+        <url-pattern>/form</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description>View hasil</description>
+        <servlet-name>hasil page</servlet-name>
+        <jsp-file>/pages/hasil.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hasil page</servlet-name>
+        <url-pattern>/hasil</url-pattern>
+    </servlet-mapping>
+
+    <!--
+        <servlet>
+            <description>Page untuk memanajemen user</description>
+            <servlet-name>Manajemen User</servlet-name>
+            <jsp-file>/manuser.jsp</jsp-file>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>Manajemen User</servlet-name>
+            <url-pattern>/manage-user</url-pattern>
+        </servlet-mapping>
+        -->
+    <!--
+    <error-page>
+    <error-code>401</error-code>
+    <location>/</location>
+</error-page>
+<error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/Error</location>
+</error-page>
+<servlet>
+    <servlet-name>Loginz</servlet-name>
+    <servlet-class>Controller.Loginz</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>Loginz</servlet-name>
+    <url-pattern>/Loginz</url-pattern>
+</servlet-mapping>
+-->
+
+    <session-config>
+        <session-timeout>
+            10
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
