@@ -7,7 +7,7 @@
         response.sendRedirect("/");
     }else{
     F_Koneksi Koneksi = new F_Koneksi();
-    Object[] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"'");
+    Object[] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"';");
     System.out.println(Arrays.toString(Hasil));
 %>
 <!DOCTYPE html>
