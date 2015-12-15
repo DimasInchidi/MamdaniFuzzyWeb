@@ -1,11 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@ page import="servlet.FBConnection" %>
-<%@ page import="servlet.FBGraph" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="servlet.F_Koneksi" %>
-<%
-
-%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,7 +116,3 @@
 </body>
 
 </html>
-<%
-//        }
-//    }
-%>

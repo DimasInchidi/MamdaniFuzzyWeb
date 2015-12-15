@@ -12,7 +12,7 @@ import java.net.URLEncoder;
 public class FBConnection {
     public static final String FB_APP_ID = System.getenv("FB_APP_ID");
     public static final String FB_APP_SECRET = System.getenv("FB_APP_SECRET");
-    public static final String REDIRECT_URI = "https://fuzzybunovi.herokuapp.com/";
+    public static final String REDIRECT_URI = "https://fuzzybunovi.herokuapp.com/form";
 
 
     public String getFBAuthUrl() {

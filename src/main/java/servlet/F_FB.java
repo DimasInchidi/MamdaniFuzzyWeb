@@ -17,7 +17,6 @@ public class F_FB extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String code,url, accessToken, graph;
     Map fbProfileData;
-
     code = request.getParameter("code");
     if (code == null || code.equals("")) {
         FBConnection fbConnection = new FBConnection();
@@ -34,7 +33,9 @@ public class F_FB extends HttpServlet {
         F_Koneksi Koneksi = new F_Koneksi();
         String query = "SELECT * FROM datauser WHERE userid = '"+fbProfileData.get("id")+"';";
         if (Koneksi.SelectCheck(query)){
-            response.sendRedirect("/Thanks#"+fbProfileData.get("id"));
+            HttpSession session = request.getSession();
+            session.setAttribute("ID",fbProfileData.get("id"));
+            response.sendRedirect("/hasil");
         }else{
             String fail;
             HttpSession session = request.getSession();
