@@ -18,14 +18,13 @@ public class F_FB extends HttpServlet {
     String code,url, accessToken, graph;
     Map fbProfileData;
     code = "";
-    if (code == null || code.equals("")) {
+    if (code.equals("")) {
         FBConnection fbConnection = new FBConnection();
         url = fbConnection.getFBAuthUrl();
         response.sendRedirect(url);
     } else{
         FBConnection fbConnection = new FBConnection();
         accessToken = fbConnection.getAccessToken(code);
-
         FBGraph fbGraph = new FBGraph(accessToken);
         graph = fbGraph.getFBGraph();
         fbProfileData = fbGraph.getGraphData(graph);
