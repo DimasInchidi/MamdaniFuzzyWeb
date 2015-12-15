@@ -3,7 +3,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String id =request.getParameter("mamimu");
-    if (id !=null || !id.equalsIgnoreCase("")){
+    if (id ==null || id.equalsIgnoreCase("")) {
+        response.sendRedirect("/");
+    }else{
     F_Koneksi Koneksi = new F_Koneksi();
     Object[] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"'");
     System.out.println(Arrays.toString(Hasil));
@@ -137,7 +139,5 @@
 
 </html>
 <%
-    }else{
-        response.sendRedirect("/");
     }
 %>
