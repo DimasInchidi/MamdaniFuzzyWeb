@@ -112,14 +112,14 @@
                             <form role="form" action="/FIS" method="post">
                                 <fieldset disabled>
                                     <div class="form-group">
-                                        <label>Username</label>
-                                        <input class="form-control" id="disabledInput" type="text" placeholder="<%=fbProfileData.get("name")%>" disabled>
+                                        <label>Nama</label>
+                                        <input class="form-control" id="disabledInput" type="text" placeholder="<%=fbProfileData.get("first_name")%>" disabled>
                                     </div>
                                 </fieldset>
 
                                 <div class="form-group">
                                     <label>Jenis Kelamin</label>
-                                    <input class="form-control" name="jeniskelamin">
+                                    <input class="form-control" name="jeniskelamin" placeholder="<%=fbProfileData.get("gender")%>">
                                     <p class="help-block">laki-laki atau perempuan</p>
                                 </div>
                                 <div class="form-group">

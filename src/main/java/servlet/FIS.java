@@ -21,6 +21,7 @@ public class FIS extends HttpServlet {
         tinggibadan = Integer.parseInt(request.getParameter("tinggibadan"));
         int[] Values = {jeniskelamin, nomorsepatu, warnakulit, tinggibadan};
         float NilaiKemiripan = Fuzzy.FIS(Values);
+        response.sendRedirect("/hasil");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
