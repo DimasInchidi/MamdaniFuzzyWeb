@@ -113,7 +113,7 @@
                                 <fieldset disabled>
                                     <div class="form-group">
                                         <label>Nama</label>
-                                        <input class="form-control" id="disabledInput" type="text" placeholder="<%=fbProfileData.get("name")%>" name="nama" value="<%=fbProfileData.get("name")%>" disabled>
+                                        <input class="form-control" id="disabledInput" type="text" placeholder="<%=fbProfileData.get("name")%>" disabled>
                                     </div>
                                 </fieldset>
 
@@ -167,7 +167,9 @@
                                 <div class="form-group">
                                     <input class="hidden" name="id" value="<%=fbProfileData.get("id")%>">
                                 </div>
-
+                                <div class="form-group">
+                                    <input class="hidden" name="nama" value="<%=fbProfileData.get("name")%>">
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
 
