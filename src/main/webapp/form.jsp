@@ -24,7 +24,7 @@
         F_Koneksi Koneksi = new F_Koneksi();
         String query = "SELECT * FROM clientdata WHERE id = '"+id+"';";
         if (Koneksi.SelectCheck(query)){
-            response.sendRedirect("/hasil?id="+id);
+            response.sendRedirect("/hasil?mamimu="+id);
         }else{
             String fail;
             if (session.getAttribute("fail") == null || session.getAttribute("fail").equals("")){
