@@ -23,7 +23,7 @@
                                                 response.setIntHeader("Refresh", 5);
                                                 F_Koneksi FK = new F_Koneksi();
                                                 try{
-                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata", 10);
+                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata", 6);
                                                     for (Object[] Hasil : hasil) {
                                                         System.out.println(Arrays.deepToString(hasil));
                                                         out.print("<tr>");
@@ -39,7 +39,7 @@
                                                 }catch(Exception ex){
                                                     out.print("<tr>");
                                                     out.print("<td>");
-                                                    out.print(ex.getMessage());
+                                                    out.print("Data Kosong");
                                                     out.print("</td>");
                                                     out.print("</tr>");
                                                 }
