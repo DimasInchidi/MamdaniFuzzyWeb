@@ -4,34 +4,7 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="servlet.F_Koneksi" %>
 <%
-    System.out.println("pageHead");
-    String code= "",url = "", accessToken = "", graph = "";
-    Map fbProfileData = null;
 
-    code = request.getParameter("code");
-    if (code == null || code.equals("")) {
-        FBConnection fbConnection = new FBConnection();
-        url = fbConnection.getFBAuthUrl();
-        response.sendRedirect(url);
-    } else{
-        FBConnection fbConnection = new FBConnection();
-        accessToken = fbConnection.getAccessToken(code);
-
-        FBGraph fbGraph = new FBGraph(accessToken);
-        graph = fbGraph.getFBGraph();
-        fbProfileData = fbGraph.getGraphData(graph);
-
-        F_Koneksi Koneksi = new F_Koneksi();
-        String query = "SELECT * FROM datauser WHERE userid = '"+fbProfileData.get("id")+"';";
-        if (Koneksi.SelectCheck(query)){
-            response.sendRedirect("/Thanks#"+fbProfileData.get("id"));
-        }else{
-            String fail;
-            if (session.getAttribute("fail") == null || session.getAttribute("fail").equals("")){
-                fail = "none";
-            } else{
-                fail = session.getAttribute("fail").toString();
-            }
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +87,7 @@
                     <b>So, mulai ikuti kompetisi sekarang!</b>
                     <br>
 
-                    <a class="btn btn-block btn-social btn-facebook" href="https://Facebook/login">
+                    <a class="btn btn-block btn-social btn-facebook" href="/FBConnect">
                         <i class="fa fa-facebook"></i>
                         <div align="center"> Sign in with Facebook</div>
                     </a>
@@ -152,6 +125,6 @@
 
 </html>
 <%
-        }
-    }
+//        }
+//    }
 %>

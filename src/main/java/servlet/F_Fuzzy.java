@@ -22,7 +22,7 @@ public class F_Fuzzy {
             {1,0,2,1,-1},//    [R7] IF jeniskelamin BEDA AND nomorsepatu SAMA THEN NilaiKemiripan BERKURANG.
             {3,0,4,1,-1},//    [R8] IF warnakulit BEDA AND tinggibadan SAMA THEN NilaiKemiripan BERKURANG.
     };
-    private float[] Predikati, NKsama, NKbeda, zi;
+    protected float[] Predikati, NKsama, NKbeda, zi;
 
     public float FIS(int[] value){
 
