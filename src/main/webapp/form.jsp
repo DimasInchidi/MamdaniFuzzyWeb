@@ -117,6 +117,52 @@
                                     </div>
                                 </fieldset>
 
+                                <div class="form-group">
+                                    <label>Jenis Kelamin</label>
+                                    <input class="form-control">
+                                    <p class="help-block">laki-laki atau perempuan</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tinggi Badan</label>
+                                    <input class="form-control">
+                                    <p class="help-block">tinggi badan anda dalam satuan CM</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Selects</label>
+                                    <select class="form-control">
+                                        <option>Hitam</option>
+                                        <option>Coklat</option>
+                                        <option>Sawo Matang</option>
+                                        <option>Kuning Langsat</option>
+                                        <option>Putih</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nomor Sepatu</label>
+                                    <input class="form-control">
+                                    <p class="help-block">www.itsmachmudi.files.wordpress.com/2014/02/tabel-ukuran-sepatu.png</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Berat Badan</label>
+                                    <input class="form-control">
+                                    <p class="help-block">berat badan anda dalam satuan kg</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Umur</label>
+                                    <input class="form-control">
+                                    <p class="help-block">usia anda saat ini</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Hobi</label>
+                                    <input class="form-control">
+                                    <p class="help-block">hal-hal menarik yang biasa anda lakukan</p>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
 
