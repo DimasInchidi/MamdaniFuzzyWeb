@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * 2015 Dimas Ari for all my friends. Thanks
@@ -15,7 +16,7 @@ public class FIS extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         F_Fuzzy Fuzzy = new F_Fuzzy();
         int jeniskelamin, nomorsepatu=0, warnakulit, tinggibadan=0, fail = 0;
-        switch (request.getParameter("jeniskelamin").toString()){
+        switch (request.getParameter("jeniskelamin")){
             case "Perempuan":
                 jeniskelamin = 1;
                 break;
@@ -23,7 +24,7 @@ public class FIS extends HttpServlet {
                 jeniskelamin = 0;
                 break;
         }
-        switch (request.getParameter("warnakulit").toString()){
+        switch (request.getParameter("warnakulit")){
             case "Hitam":
                 warnakulit = 0;
                 break;
@@ -54,6 +55,7 @@ public class FIS extends HttpServlet {
             response.sendRedirect("/form?fail=true");
         }else{
             int[] Values = {jeniskelamin, nomorsepatu, warnakulit, tinggibadan};
+            System.out.println(Arrays.toString(Values));
             float NilaiKemiripan = Fuzzy.FIS(Values);
             F_Koneksi FK = new F_Koneksi();
             FK.Insert("INSERT INTO clientdata (\"id\", \"jeniskelamin\", \"nomorsepatu\", \"warnakulit\", \"tinggibadan\", \"nama\", \"nilaikemiripan\") " +
