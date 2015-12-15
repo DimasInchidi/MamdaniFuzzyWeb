@@ -13,9 +13,16 @@ import java.io.IOException;
 @WebServlet(name = "F_FB",urlPatterns = "/FBConnect")
 public class F_FB extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String code,url, accessToken, graph;
+        FBConnect(response);
+    }
+
+    private void FBConnect(HttpServletResponse response) throws IOException {
         FBConnection fbConnection = new FBConnection();
-        url = fbConnection.getFBAuthUrl();
+        String url = fbConnection.getFBAuthUrl();
         response.sendRedirect(url);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        FBConnect(response);
     }
 }
