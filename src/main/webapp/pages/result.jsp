@@ -25,7 +25,6 @@
                                                 try{
                                                 Object[][] hasil = FK.Select("SELECT * FROM clientdata", 7);
                                                     for (Object[] Hasil : hasil) {
-                                                        System.out.println(Arrays.deepToString(hasil));
                                                         out.print("<tr>");
                                                         out.print("<td>");
                                                         out.print("<a class=\"btn btn-social-icon btn-facebook\" href=\"https://facebook.com/" + Hasil[0].toString() + "\"><i class=\"fa fa-facebook\"></i></a>");

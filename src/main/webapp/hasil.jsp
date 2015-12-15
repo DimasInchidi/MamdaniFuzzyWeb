@@ -138,6 +138,6 @@
 </html>
 <%
     }else{
-        response.sendRedirect("/form");
+        response.sendRedirect("/");
     }
 %>
