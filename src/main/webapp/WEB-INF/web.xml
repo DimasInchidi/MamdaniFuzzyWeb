@@ -6,7 +6,7 @@
     <servlet>
         <description>View form</description>
         <servlet-name>form page</servlet-name>
-        <jsp-file>/pages/form.jsp</jsp-file>
+        <jsp-file>/form.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>form page</servlet-name>
@@ -16,21 +16,11 @@
     <servlet>
         <description>View hasil</description>
         <servlet-name>hasil page</servlet-name>
-        <jsp-file>/pages/hasil.jsp</jsp-file>
+        <jsp-file>/hasil.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>hasil page</servlet-name>
         <url-pattern>/hasil</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <description>View rank</description>
-        <servlet-name>rank page</servlet-name>
-        <jsp-file>/pages/result.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>rank page</servlet-name>
-        <url-pattern>/rank</url-pattern>
     </servlet-mapping>
 
     <!--
