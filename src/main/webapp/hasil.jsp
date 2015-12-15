@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-lg-12 col-md-6">
                     <div class="panel panel-body">
-                            ntar disini hasil dan cara perhitungannya
+                            bacot doang
                     </div>
                 </div>
             </div>

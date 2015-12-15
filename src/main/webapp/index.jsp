@@ -73,7 +73,7 @@
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                         Website ini didesikasikan untuk menyelesaikan tugas mata kuliah logika fuzzy yang diberikan oleh Ibu Novi pada tanggal 20 November 2015.
-                        Di dalam website ini terdapat sistem inferensi fuzzy untuk menentukan nilai kemiripan seseorang dengan ibu novi menggunakan metode mamdani.
+                        Di dalam website ini terdapat sistem inferensi fuzzy untuk menentukan nilai kemiripan seseorang dengan ibu novi menggunakan metode tsukamoto.
                         Ketika memulai kompetisi ini kami akan meminta ciri-ciri anda sebagai input penilaian kami.
                         Komposisi aturan dan cara penilaiannya akan muncul di halaman hasil agar anda tidak curang :)
                     <b>So, mulai ikuti kompetisi sekarang!</b>
