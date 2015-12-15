@@ -87,10 +87,13 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
-                                <h1 class="col-xs-3">
-                                    <i class="fa fa-star fa-5x"><h1><%=Hasil[0][5]%></h1></i>
+                                <div class="col-xs-2">
+                                    <i class="fa fa-star fa-5x"></i>
                                 </div>
-                                <div class="col-xs-9 text-right">
+                                <div class="col-xs-4 huge">
+                                    <%=Hasil[0][5]%>
+                                </div>
+                                <div class="col-xs-6 text-right">
                                     <div class="huge"><%=Hasil[0][6]%></div>
                                     <%
                                         if (Float.parseFloat(Hasil[0][6].toString()) < 33f){
