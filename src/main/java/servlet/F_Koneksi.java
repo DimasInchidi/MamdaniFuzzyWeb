@@ -59,6 +59,7 @@ public class F_Koneksi {
             List<Object[]> rowList = new ArrayList<>();
             List<Object> colList = new ArrayList<>();
             while (rs.next()){
+                colList = new ArrayList<>();
                 for (int j = 1; j < colcount+1; j++) {
                     colList.add(rs.getObject(j));
                 }
