@@ -7,7 +7,7 @@
         response.sendRedirect("/");
     }else{
     F_Koneksi Koneksi = new F_Koneksi();
-    Object[] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"';");
+    Object[][] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"';",7);
     System.out.println(Arrays.toString(Hasil));
 %>
 <!DOCTYPE html>
@@ -89,10 +89,10 @@
                             <div class="row">
                                 <div class="col-xs-3">
                                     <i class="fa fa-star fa-5x"></i>
-                                    <%=Hasil[5]%>
+                                    <%=Hasil[0][5]%>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge"><%=Hasil[6]%></div>
+                                    <div class="huge"><%=Hasil[0][6]%></div>
                                     <div>Nilai Kemiripan Anda!</div>
                                 </div>
                             </div>
