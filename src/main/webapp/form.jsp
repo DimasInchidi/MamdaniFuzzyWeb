@@ -163,6 +163,9 @@
                                     <input class="form-control" name="hobi">
                                     <p class="help-block">hal-hal menarik yang biasa anda lakukan</p>
                                 </div>
+                                <div class="form-group">
+                                    <input class="hidden" name="id" value="<%=fbProfileData.get("id")%>">
+                                </div>
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>

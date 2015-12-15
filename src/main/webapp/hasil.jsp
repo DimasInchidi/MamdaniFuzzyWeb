@@ -83,7 +83,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-xs-3 huge">
+                                <div class="col-xs-3">
                                     <i class="fa fa-star fa-5x"></i>
                                     <%=Hasil[5]%>
                                 </div>
