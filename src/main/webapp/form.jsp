@@ -5,9 +5,8 @@
 <%@ page import="servlet.F_Koneksi" %>
 <%
     System.out.println("pageHead");
-    String code= "",url = "", accessToken = "", graph = "";
-    Map fbProfileData = null;
-
+    String code,url, accessToken, graph;
+    Map fbProfileData;
         code = request.getParameter("code");
     if (code == null || code.equals("")) {
         FBConnection fbConnection = new FBConnection();
@@ -109,7 +108,7 @@
                         </div>
                         <div class="panel-body">
 
-                            <form role="form" action="/FIS" method="post">
+                            <form role="form" action="FIS" method="post">
                                 <fieldset disabled>
                                     <div class="form-group">
                                         <label>Nama</label>
@@ -119,8 +118,10 @@
 
                                 <div class="form-group">
                                     <label>Jenis Kelamin</label>
-                                    <input class="form-control" name="jeniskelamin" placeholder="<%=fbProfileData.get("gender")%>">
-                                    <p class="help-block">laki-laki atau perempuan</p>
+                                    <select class="form-control" name="jeniskelamin">
+                                        <option>Laki-laki</option>
+                                        <option>Perempuan</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Tinggi Badan</label>
