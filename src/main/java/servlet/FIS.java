@@ -55,7 +55,6 @@ public class FIS extends HttpServlet {
             response.sendRedirect("/form?fail=true");
         }else{
             int[] Values = {jeniskelamin, nomorsepatu, warnakulit, tinggibadan};
-            System.out.println(Arrays.toString(Values));
             float NilaiKemiripan = Fuzzy.FIS(Values);
             F_Koneksi FK = new F_Koneksi();
             FK.Insert("INSERT INTO clientdata (\"id\", \"jeniskelamin\", \"nomorsepatu\", \"warnakulit\", \"tinggibadan\", \"nama\", \"nilaikemiripan\") " +

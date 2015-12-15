@@ -72,6 +72,7 @@ public class F_Fuzzy {
 
     // SEMUA variable fuzzy kecuali NilaiKemiripan terdiri atas 2 Himpunan Fuzzy {SAMA, BEDA}
     public float NilaiKeanggotaan(int x, int a, int b, int c){
+        System.out.println(x+"<<x a>>"+a+" "+b+" "+c);
         if (x==b){
             return 1f;
         } else if (x<b) {
