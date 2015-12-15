@@ -1,6 +1,37 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="servlet.FBConnection" %>
+<%@ page import="servlet.FBGraph" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="servlet.F_Koneksi" %>
 <%
+    System.out.println("pageHead");
+    String code= "",url = "", accessToken = "", graph = "";
+    Map fbProfileData = null;
 
+        code = request.getParameter("code");
+    if (code == null || code.equals("")) {
+        FBConnection fbConnection = new FBConnection();
+        url = fbConnection.getFBAuthUrl();
+        response.sendRedirect(url);
+    } else{
+        FBConnection fbConnection = new FBConnection();
+        accessToken = fbConnection.getAccessToken(code);
+
+        FBGraph fbGraph = new FBGraph(accessToken);
+        graph = fbGraph.getFBGraph();
+        fbProfileData = fbGraph.getGraphData(graph);
+
+        F_Koneksi Koneksi = new F_Koneksi();
+        String query = "SELECT * FROM clientdata WHERE id = '"+fbProfileData.get("id")+"';";
+        if (Koneksi.SelectCheck(query)){
+            response.sendRedirect("/hasil");
+        }else{
+            String fail;
+            if (session.getAttribute("fail") == null || session.getAttribute("fail").equals("")){
+                fail = "none";
+            } else{
+                fail = session.getAttribute("fail").toString();
+            }
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +110,7 @@
                                 <fieldset disabled>
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input" disabled>
+                                        <input class="form-control" id="disabledInput" type="text" placeholder="<%=fbProfileData.get("name")%>" disabled>
                                     </div>
                                 </fieldset>
 
@@ -295,5 +326,6 @@
 </div>
 /.row (nested) -->
 <%
-
+    }
+    }
 %>
