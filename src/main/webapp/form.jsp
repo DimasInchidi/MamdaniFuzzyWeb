@@ -5,8 +5,8 @@
 <%@ page import="servlet.F_Koneksi" %>
 <%
     System.out.println("pageHead");
-    String code,url, accessToken, graph;
-    Map fbProfileData;
+    String code="",url="", accessToken="", graph="";
+    Map fbProfileData = null;
         code = request.getParameter("code");
     if (code == null || code.equals("")) {
         FBConnection fbConnection = new FBConnection();
