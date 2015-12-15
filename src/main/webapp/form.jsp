@@ -23,7 +23,7 @@
         F_Koneksi Koneksi = new F_Koneksi();
         String query = "SELECT * FROM clientdata WHERE id = '"+fbProfileData.get("id")+"';";
         if (Koneksi.SelectCheck(query)){
-            response.sendRedirect("/hasil");
+            response.sendRedirect("/hasil?id="+fbProfileData.get("id"));
         }else{
             String fail;
             if (session.getAttribute("fail") == null || session.getAttribute("fail").equals("")){
