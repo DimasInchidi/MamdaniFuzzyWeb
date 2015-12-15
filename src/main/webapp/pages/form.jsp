@@ -51,7 +51,7 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <jsp:include page="rank" flush="true"/>
+                        <jsp:include page="../pages/result.jsp" flush="true"/>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
