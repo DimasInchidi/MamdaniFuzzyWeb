@@ -35,7 +35,7 @@
                                                         out.print("</tr>");
                                                     }
                                                 }catch(Exception ex){
-                                                    ex.printStackTrace();
+                                                    out.print("Data Kosong");
                                                 }
                                             %>
                                     </tbody>
