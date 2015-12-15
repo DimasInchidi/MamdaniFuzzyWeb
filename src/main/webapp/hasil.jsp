@@ -87,11 +87,12 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-xs-2">
+                                <div class="col-xs-1">
                                     <i class="fa fa-star fa-5x"></i>
                                 </div>
-                                <div class="col-xs-4 huge">
-                                    <%=Hasil[0][5]%>
+                                <div class="col-xs-5">
+                                    <div> </div>
+                                    <div class="huge"><%=Hasil[0][5]%></div>
                                 </div>
                                 <div class="col-xs-6 text-right">
                                     <div class="huge"><%=Hasil[0][6]%></div>
