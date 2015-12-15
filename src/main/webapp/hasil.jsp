@@ -3,10 +3,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String id =request.getParameter("mamimu");
+    if (id !=null || !id.equalsIgnoreCase("")){
     F_Koneksi Koneksi = new F_Koneksi();
     Object[] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"'");
     System.out.println(Arrays.toString(Hasil));
-    if (Hasil !=null){
 %>
 <!DOCTYPE html>
 <html lang="en">
