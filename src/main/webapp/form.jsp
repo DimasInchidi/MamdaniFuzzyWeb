@@ -99,10 +99,10 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-2 -align-center">
+                <div class="col-lg-3 -align-center">
                     <img class="col-lg-12" src="http://graph.facebook.com/<%=fbProfileData.get("id")%>/picture?type=large">
                 </div>
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Masukan Data Anda
@@ -142,7 +142,7 @@
                                 <div class="form-group">
                                     <label>Nomor Sepatu</label>
                                     <input class="form-control">
-                                    <p class="help-block">www.itsmachmudi.files.wordpress.com/2014/02/tabel-ukuran-sepatu.png</p>
+                                    <p class="help-block">Lihat di <a href="http://www.itsmachmudi.files.wordpress.com/2014/02/tabel-ukuran-sepatu.png">tabel ini</a></p>
                                 </div>
 
                                 <div class="form-group">
