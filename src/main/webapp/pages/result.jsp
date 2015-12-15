@@ -22,7 +22,7 @@
                                                 response.setIntHeader("Refresh", 5);
                                                 F_Koneksi FK = new F_Koneksi();
                                                 try{
-                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata Group by `clientdata`.`nama` ORDER BY `clientdata`.`nilaikemiripan`  DESC", 10);
+                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata", 10);
                                                     for (Object[] Hasil : hasil) {
                                                         out.print("<tr>");
                                                         out.print("<td>");
@@ -35,7 +35,11 @@
                                                         out.print("</tr>");
                                                     }
                                                 }catch(Exception ex){
+                                                    out.print("<tr>");
+                                                    out.print("<td>");
                                                     out.print("Data Kosong");
+                                                    out.print("</td>");
+                                                    out.print("</tr>");
                                                 }
                                             %>
                                     </tbody>
