@@ -1,9 +1,11 @@
 <%@ page import="servlet.F_Koneksi" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String id =request.getParameter("mamimu");
     F_Koneksi Koneksi = new F_Koneksi();
     Object[] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"'");
+    System.out.println(Arrays.toString(Hasil));
     if (Hasil !=null){
 %>
 <!DOCTYPE html>
