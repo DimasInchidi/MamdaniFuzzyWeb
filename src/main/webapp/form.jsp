@@ -153,7 +153,7 @@
 
                                 <div class="form-group">
                                     <label>Umur</label>
-                                    <input class="form-control" name="umur">
+                                    <input class="form-control" name="umur" placeholder="<%=fbProfileData.get("age_range")%>">
                                     <p class="help-block">usia anda saat ini</p>
                                 </div>
 

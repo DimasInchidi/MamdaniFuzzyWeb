@@ -45,12 +45,12 @@ public class FBGraph {
             JSONObject json = new JSONObject(fbGraph);
             fbProfile.put("id", json.getString("id"));
             fbProfile.put("name", json.getString("name"));
-            if (json.has("first_name"))
-            fbProfile.put("first_name", json.getString("first_name"));
+            fbProfile.put("gender", json.getString("gender"));
+            fbProfile.put("age_range", json.getString("age_range"));
+
             if (json.has("email"))
                 fbProfile.put("email", json.getString("email"));
-            if (json.has("gender"))
-                fbProfile.put("gender", json.getString("gender"));
+
         } catch (JSONException e) {
             e.printStackTrace();
             throw new RuntimeException("ERROR in parsing FB graph data. " + e);
