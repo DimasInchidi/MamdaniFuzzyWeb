@@ -2,6 +2,7 @@
 <web-app metadata-complete="false" version="3.1"
          xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
     <servlet>
         <description>View form</description>
         <servlet-name>form page</servlet-name>
@@ -11,6 +12,7 @@
         <servlet-name>form page</servlet-name>
         <url-pattern>/form</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <description>View hasil</description>
         <servlet-name>hasil page</servlet-name>
@@ -19,6 +21,16 @@
     <servlet-mapping>
         <servlet-name>hasil page</servlet-name>
         <url-pattern>/hasil</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>View rank</description>
+        <servlet-name>rank page</servlet-name>
+        <jsp-file>/pages/result.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rank page</servlet-name>
+        <url-pattern>/rank</url-pattern>
     </servlet-mapping>
 
     <!--
