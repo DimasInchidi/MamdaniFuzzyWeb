@@ -39,7 +39,7 @@
                                                 }catch(Exception ex){
                                                     out.print("<tr>");
                                                     out.print("<td>");
-                                                    out.print("Data Kosong");
+                                                    out.print(ex.getMessage());
                                                     out.print("</td>");
                                                     out.print("</tr>");
                                                 }
