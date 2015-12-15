@@ -99,7 +99,10 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-2 -align-center">
+                    <img class="col-lg-12" src="http://graph.facebook.com/<%=fbProfileData.get("id")%>/picture?type=large">
+                </div>
+                <div class="col-lg-10">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Masukan Data Anda
