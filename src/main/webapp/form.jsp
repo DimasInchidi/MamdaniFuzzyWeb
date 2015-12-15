@@ -44,7 +44,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Who Looks Like Bu Novi - Form</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -109,7 +109,7 @@
                         </div>
                         <div class="panel-body">
 
-                            <form role="form">
+                            <form role="form" action="/FIS" method="post">
                                 <fieldset disabled>
                                     <div class="form-group">
                                         <label>Username</label>
@@ -119,18 +119,18 @@
 
                                 <div class="form-group">
                                     <label>Jenis Kelamin</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="jeniskelamin">
                                     <p class="help-block">laki-laki atau perempuan</p>
                                 </div>
                                 <div class="form-group">
                                     <label>Tinggi Badan</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="tinggibadan">
                                     <p class="help-block">tinggi badan anda dalam satuan CM</p>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Selects</label>
-                                    <select class="form-control">
+                                    <label>Warna Kulit</label>
+                                    <select class="form-control" name="warnakulit">
                                         <option>Hitam</option>
                                         <option>Coklat</option>
                                         <option>Sawo Matang</option>
@@ -141,25 +141,25 @@
 
                                 <div class="form-group">
                                     <label>Nomor Sepatu</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="nomorsepatu">
                                     <p class="help-block">Lihat di <a href="http://www.itsmachmudi.files.wordpress.com/2014/02/tabel-ukuran-sepatu.png">tabel ini</a></p>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Berat Badan</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="beratbadan">
                                     <p class="help-block">berat badan anda dalam satuan kg</p>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Umur</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="umur">
                                     <p class="help-block">usia anda saat ini</p>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Hobi</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="hobi">
                                     <p class="help-block">hal-hal menarik yang biasa anda lakukan</p>
                                 </div>
 
