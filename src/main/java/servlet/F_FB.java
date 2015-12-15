@@ -17,7 +17,7 @@ public class F_FB extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String code,url, accessToken, graph;
     Map fbProfileData;
-    code = request.getParameter("code");
+    code = "";
     if (code == null || code.equals("")) {
         FBConnection fbConnection = new FBConnection();
         url = fbConnection.getFBAuthUrl();
