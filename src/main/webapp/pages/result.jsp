@@ -23,7 +23,7 @@
                                                 response.setIntHeader("Refresh", 5);
                                                 F_Koneksi FK = new F_Koneksi();
                                                 try{
-                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata", 7);
+                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata;", 7);
                                                     for (Object[] Hasil : hasil) {
                                                         out.print("<tr>");
                                                         out.print("<td>");
