@@ -1,7 +1,10 @@
+<%@ page import="servlet.F_Koneksi" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String id =request.getParameter("mamimu");
-
+    F_Koneksi Koneksi = new F_Koneksi();
+    Object[] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"'");
+    if (Hasil !=null){
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,12 +83,13 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-xs-3">
+                                <div class="col-xs-3 huge">
                                     <i class="fa fa-star fa-5x"></i>
+                                    <%=Hasil[5]%>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">88,3</div>
-                                    <div>Rangking Anda!</div>
+                                    <div class="huge"><%=Hasil[6]%></div>
+                                    <div>Nilai Kemiripan Anda!</div>
                                 </div>
                             </div>
                         </div>
@@ -130,3 +134,8 @@
 </body>
 
 </html>
+<%
+    }else{
+        response.sendRedirect("/form");
+    }
+%>
