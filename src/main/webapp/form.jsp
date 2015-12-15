@@ -19,11 +19,12 @@
         FBGraph fbGraph = new FBGraph(accessToken);
         graph = fbGraph.getFBGraph();
         fbProfileData = fbGraph.getGraphData(graph);
-
+        String id = fbProfileData.get("id").toString();
+        System.out.println("IDnye "+id);
         F_Koneksi Koneksi = new F_Koneksi();
-        String query = "SELECT * FROM clientdata WHERE id = '"+fbProfileData.get("id")+"';";
+        String query = "SELECT * FROM clientdata WHERE id = '"+id+"';";
         if (Koneksi.SelectCheck(query)){
-            response.sendRedirect("/hasil?id="+fbProfileData.get("id"));
+            response.sendRedirect("/hasil?id="+id);
         }else{
             String fail;
             if (session.getAttribute("fail") == null || session.getAttribute("fail").equals("")){
