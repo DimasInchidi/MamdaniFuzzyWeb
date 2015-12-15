@@ -89,11 +89,25 @@
                             <div class="row">
                                 <div class="col-xs-3">
                                     <i class="fa fa-star fa-5x"></i>
-                                    <%=Hasil[0][5]%>
+                                    <div class="huge"><%=Hasil[0][5]%></div>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge"><%=Hasil[0][6]%></div>
-                                    <div>Nilai Kemiripan Anda!</div>
+                                    <%
+                                        if (Float.parseFloat(Hasil[0][6].toString()) < 33f){
+                                    %>
+                                    <div>Anda tidak mirip Bu Novi</div>
+                                    <%
+                                    }else if (Float.parseFloat(Hasil[0][6].toString()) < 66f){
+                                    %>
+                                    <div>Anda sedikit mirip Bu Novi!</div>
+                                    <%
+                                        }else{
+                                    %>
+                                    <div>Anda mirip Bu Novi!!</div>
+                                    <%
+                                        }
+                                    %>
                                 </div>
                             </div>
                         </div>
