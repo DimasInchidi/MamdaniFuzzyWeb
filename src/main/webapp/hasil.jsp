@@ -118,7 +118,8 @@
                 </div>
                 <div class="col-lg-12 col-md-6">
                     <div class="panel panel-body">
-                            bacot doang
+                        <%--TODO: Penjelasan cara perhitungan--%>
+                            Penjelasan
                     </div>
                 </div>
             </div>
