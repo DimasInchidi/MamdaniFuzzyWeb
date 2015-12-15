@@ -46,6 +46,7 @@ public class FBGraph {
             fbProfile.put("id", json.getString("id"));
             fbProfile.put("name", json.getString("name"));
             fbProfile.put("gender", json.getString("gender"));
+            if (json.has("age_range"))
             fbProfile.put("age_range", json.getString("age_range"));
 
             if (json.has("email"))
