@@ -2,13 +2,15 @@
 <%@ page import="java.util.Arrays" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String id =request.getParameter("mamimu");
-    if (id ==null || id.equalsIgnoreCase("")) {
-        response.sendRedirect("/");
-    }else{
-    F_Koneksi Koneksi = new F_Koneksi();
-    Object[][] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"';",7);
-    System.out.println(Arrays.toString(Hasil));
+//    String id =request.getParameter("mamimu");
+//    if (id ==null || id.equalsIgnoreCase("")) {
+//        response.sendRedirect("/");
+//    }else{
+//    F_Koneksi Koneksi = new F_Koneksi();
+//    Object[][] Hasil = Koneksi.Select("SELECT * FROM clientdata WHERE id = '"+id+"';",7);
+//    System.out.println(Arrays.toString(Hasil));
+    Object[][] Hasil = {{"938350345","aku","aku","aku","aku","Dimas Ari","87"}};
+    if  (Hasil == null){response.sendRedirect("/");}else{
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +24,7 @@
     <meta name="author" content="">
 
     <title>Who Looks Like Bu Novi - Hasil</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -65,7 +68,7 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <jsp:include page="./pages/result.jsp" flush="true"/>
+                        <%--<jsp:include page="./pages/result.jsp" flush="true"/>--%>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -119,7 +122,58 @@
                 <div class="col-lg-12 col-md-6">
                     <div class="panel panel-body">
                         <%--TODO: Penjelasan cara perhitungan--%>
-                            Penjelasan
+                        <p>Untuk menentukan pemenang dari kontes "Who Looks Like Bu Novi" kami memerlukan nilai kemiripan kontestan dengan Ibu Novi. Untuk memperkecil ruang lingkup perhitungan kami memutuskan bahwa orang yang memiliki kemungkinan mirip dengan Ibu Novi adalah orang yang memiliki usia di atas 13 tahun hingga 35 tahun. Dari data yang dapat kami kumpulkan, ukuran sepatu untuk pria dan wanita paling kecil yang digunakan oleh orang usia di atas 15 tahun adalah ukuran 35, dan ukuran sepatu paling besar adalah 43. Tinggi badan berada pada kisaran 160-180. Kemudian kami membagi warna kulit menjadi 5 jenis yaitu, hitam, coklat, sawo matang, kuning langsat, putih.<br>
+                            Agar mudah dipahami dan dapat menjadi sebuah penilaian yang baik kami membatasi nilai kemiripan dari 0 sampai 100.<br>
+                            Kemudian dari data Anda, Jenis Kelamin anu, Nomor Sepatu anu, Warna Kulit anu, dan Tinggi Badan anu kami menggunakan 8 aturan fuzzy sebagai berikut:</p>
+                            <br>
+                            <p class="text-center">
+                            [R1] IF jeniskelamin SAMA AND nomorsepatu SAMA THEN NilaiKemiripan BERTAMBAH.<br>
+                            [R2] IF warnakulit SAMA AND tinggibadan SAMA THEN NilaiKemiripan BERTAMBAH.<br>
+                            [R3] IF jeniskelamin BEDA AND nomorsepatu BEDA THEN NilaiKemiripan BERKURANG.<br>
+                            [R4] IF warnakulit BEDA AND tinggibadan BEDA THEN NilaiKemiripan BERKURANG.<br>
+                            [R5] IF jeniskelamin SAMA AND nomorsepatu BEDA THEN NilaiKemiripan BERTAMBAH.<br>
+                            [R6] IF warnakulit SAMA AND tinggibadan BEDA THEN NilaiKemiripan BERTAMBAH.<br>
+                            [R7] IF jeniskelamin BEDA AND nomorsepatu SAMA THEN NilaiKemiripan BERKURANG.<br>
+                            [R8] IF warnakulit BEDA AND tinggibadan SAMA THEN NilaiKemiripan BERKURANG.<br>
+                            </p>
+                            <br>
+                            <p>Ada 4 variabel fuzzy yang dimodelkan, yaitu: jeniskelamin, nomorsepatu, warnakulit, dan tinggibadan. Semua variable fuzzy yang dimodelkan terdiri atas 2 himpunan fuzzy SAMA dan BEDA.</p><br>
+                            <div class="col-lg-6 text-center"><img style="width: 470px; height: 200px" src="img/jk.png">Jenis Kelamin</div>
+                            <div class="col-lg-6 text-center"><img style="width: 470px; height: 200px" src="img/ns.png">Nomor Sepatu</div>
+                            <div class="col-lg-6 text-center"><img style="width: 470px; height: 200px" src="img/wk.png">Warna Kulit</div>
+                            <div class="col-lg-6 text-center"><img style="width: 470px; height: 200px" src="img/tb.png">Tinggi Badan</div><br>
+                            <br>
+                            <p>Mencari Nilai Keanggotaan:<br>
+                            µjeniskelaminSAMA = <br>
+                            µjeniskelaminBEDA = 1 - µjeniskelaminSAMA = <br>
+                            µnomorsepatuSAMA = <br>
+                            µnomorsepatuBEDA = 1 - µnomorsepatuSAMA = <br>
+                            µwarnakulitSAMA = <br>
+                            µwarnakulitBEDA = 1 - µwarnakulitSAMA = <br>
+                            µtinggibadanSAMA = <br>
+                            µtinggibadanBEDA = 1 - µtinggibadanSAMA =
+                            </p>
+                                <br>
+                            <p>
+                                Mencari nilai z untuk setiap aturan:<br>
+                            α-predikat1<br>
+                            α-predikat2<br>
+                            α-predikat3<br>
+                            α-predikat4<br>
+                            α-predikat5<br>
+                            α-predikat6<br>
+                            α-predikat7<br>
+                            α-predikat8</p>
+                            <br>
+                            Nilai Z akhir:<br>
+                            <div class="col-lg-1 text-center">z=</div>
+                            <div class="col-lg-11">
+                                1 + 1<br>
+                                <div class="fa-border"></div>
+                                1+1<br>
+                            </div>
+                            z=<br>
+                            z=<br>
                     </div>
                 </div>
             </div>
@@ -158,4 +212,5 @@
 </html>
 <%
     }
+//    }
 %>

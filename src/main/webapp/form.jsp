@@ -45,6 +45,7 @@
     <meta name="author" content="">
 
     <title>Who Looks Like Bu Novi - Form</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">

@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Kontes Mirip Bu Novi</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +61,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header" align="center">Who Looks Like Bu Novi Contest!</h1>
+                <h1 class="page-header" align="center"><img src="img/Logo.jpg" width="150px" height="150px">Who Looks Like Bu Novi Contest!</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
