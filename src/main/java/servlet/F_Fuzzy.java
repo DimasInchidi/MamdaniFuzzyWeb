@@ -14,7 +14,7 @@ public class F_Fuzzy {
             {140, 160, 180} //tinggibadan
     };
 
-    private final int[][] aturan = {
+    public final int[][] aturan = {
             {1, 1, 2, 1, 0},//    [R1] IF jeniskelamin SAMA AND nomorsepatu SAMA THEN NilaiKemiripan BERTAMBAH.
             {3, 1, 4, 1, 0},//    [R2] IF warnakulit SAMA AND tinggibadan SAMA THEN NilaiKemiripan BERTAMBAH.
             {1, 0, 2, 0, -1},//    [R3] IF jeniskelamin BEDA AND nomorsepatu BEDA THEN NilaiKemiripan BERKURANG.
@@ -24,7 +24,7 @@ public class F_Fuzzy {
             {1, 0, 2, 1, -1},//    [R7] IF jeniskelamin BEDA AND nomorsepatu SAMA THEN NilaiKemiripan BERKURANG.
             {3, 0, 4, 1, -1},//    [R8] IF warnakulit BEDA AND tinggibadan SAMA THEN NilaiKemiripan BERKURANG.
     };
-    protected float[] Predikati, NKsama, NKbeda, zi;
+    public float[] Predikati, NKsama, NKbeda, zi;
 
     public float FIS(int[] value) {
 
