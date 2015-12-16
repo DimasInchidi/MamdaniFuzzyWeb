@@ -31,7 +31,7 @@
                                                         out.print(" <a href=\"https://facebook.com/" + Hasil[0].toString() + "\">" + Hasil[5].toString());
                                                         out.print("</a></td>");
                                                         out.print("<td>");
-                                                        out.print(Hasil[6].toString());
+                                                        out.print(Hasil[6].toString().substring(0,4));
                                                         out.print("</td>");
                                                         out.print("</tr>");
                                                     }
