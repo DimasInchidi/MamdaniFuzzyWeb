@@ -20,7 +20,7 @@
                                     </thead>
                                     <tbody>
                                             <%
-                                                response.setIntHeader("Refresh", 5);
+                                                response.setIntHeader("Refresh", 10);
                                                 F_Koneksi FK = new F_Koneksi();
                                                 try{
                                                 Object[][] hasil = FK.Select("SELECT * FROM clientdata ORDER BY nilaikemiripan DESC;", 7);
@@ -36,6 +36,7 @@
                                                         out.print("</tr>");
                                                     }
                                                 }catch(Exception ex){
+                                                    ex.printStackTrace();
                                                     out.print("<tr>");
                                                     out.print("<td>");
                                                     out.print("Data Kosong");
