@@ -6,7 +6,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Hasil Kontes
+                            Hasil 8 Besar
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -23,7 +23,7 @@
                                                 response.setIntHeader("Refresh", 10);
                                                 F_Koneksi FK = new F_Koneksi();
                                                 try{
-                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata ORDER BY nilaikemiripan DESC;", 7);
+                                                Object[][] hasil = FK.Select("SELECT * FROM clientdata ORDER BY nilaikemiripan DESC LIMIT 8;", 7);
                                                     for (Object[] Hasil : hasil) {
                                                         out.print("<tr>");
                                                         out.print("<td>");
@@ -31,7 +31,9 @@
                                                         out.print(" <a href=\"https://facebook.com/" + Hasil[0].toString() + "\">" + Hasil[5].toString());
                                                         out.print("</a></td>");
                                                         out.print("<td>");
-                                                        out.print(Hasil[6].toString().substring(0,4));
+                                                        String Nilai = Hasil[6].toString();
+                                                        if (Nilai.length()>4) Nilai = Hasil[6].toString().substring(0, 4);
+                                                        out.print(Nilai);
                                                         out.print("</td>");
                                                         out.print("</tr>");
                                                     }
